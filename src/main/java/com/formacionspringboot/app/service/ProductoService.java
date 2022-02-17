@@ -13,7 +13,7 @@ public interface ProductoService {
 	
 	public List<Producto> listarTodosLosProductos();
 	
-	public Producto guardarDepartamento(Producto departamento);
+	public Producto guardarProducto(Producto producto);
 	
 	public Producto obtenerProductoPorId(Long id);
 	
