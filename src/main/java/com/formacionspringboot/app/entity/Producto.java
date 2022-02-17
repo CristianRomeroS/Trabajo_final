@@ -10,20 +10,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="clientes")
-public class Clientes implements Serializable{
+@Table(name="productos")
+public class Producto implements Serializable {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="n_cliente")
+	@Column(name="clave")
 	private long id;
 	@Column(nullable=false)
 	private String nombre;
 	@Column(nullable=false)
-	private String apellido;
-	@Column(nullable=false)
-	private String Sexo;
-	@Column(nullable=false)
-	private int telefono;
+	private String descripcion;
+	@Column(name="p_unitario")
+	private double precioUnitario;
+	private int existencias;
 	
 	
 	
@@ -39,20 +39,20 @@ public class Clientes implements Serializable{
 
 
 
-	public String getApellido() {
-		return apellido;
+	public String getDescripcion() {
+		return descripcion;
 	}
 
 
 
-	public String getSexo() {
-		return Sexo;
+	public double getPrecioUnitario() {
+		return precioUnitario;
 	}
 
 
 
-	public int getTelefono() {
-		return telefono;
+	public int getExistencias() {
+		return existencias;
 	}
 
 
@@ -69,20 +69,20 @@ public class Clientes implements Serializable{
 
 
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 
 
-	public void setSexo(String sexo) {
-		Sexo = sexo;
+	public void setPrecioUnitario(double precioUnitario) {
+		this.precioUnitario = precioUnitario;
 	}
 
 
 
-	public void setTelefono(int telefono) {
-		this.telefono = telefono;
+	public void setExistencias(int existencias) {
+		this.existencias = existencias;
 	}
 
 
