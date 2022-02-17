@@ -76,9 +76,8 @@ public class Cliente implements Serializable{
 
 
 	public void setsexo(String sexo) {
-		sexo = sexo;
+		this.sexo = sexo;
 	}
-
 
 
 	public void setTelefono(int telefono) {
