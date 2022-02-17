@@ -16,7 +16,7 @@ public class ClienteServiceImpl implements ClienteService{
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<Clientes> findAll() {
+	public List<Cliente> findAll() {
 		return clienteDao.findAll();
 	}
 
@@ -28,7 +28,7 @@ public class ClienteServiceImpl implements ClienteService{
 
 	@Override
 	@Transactional
-	public Cliente save(Clientes cliente) {
+	public Cliente save(Cliente cliente) {
 		return clienteDao.save(cliente);
 	}
 
