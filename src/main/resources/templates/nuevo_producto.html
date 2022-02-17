@@ -43,7 +43,7 @@
 				class="col-lg-6 col-md-6 col-sm6 container justify-content-center card">
 				<h1>Nuevo Cliente</h1>
 				<div class="card-body">
-					<form th:action="@{/productos}" method="POST" th:object="${productoKey}">
+					<form th:action="@{/producto}" method="POST" th:object="${productoKey}">
 						<div class="form-group">
 							<label>Nombre:</label> <input type="text" name="nombre"
 								th:field="*{nombre}" class="form-control" required>
