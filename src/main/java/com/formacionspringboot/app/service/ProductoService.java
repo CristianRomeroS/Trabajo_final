@@ -2,8 +2,6 @@ package com.formacionspringboot.app.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.formacionspringboot.app.entity.Producto;
 
 
