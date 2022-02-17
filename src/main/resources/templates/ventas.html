@@ -22,7 +22,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light"
 		style="margin-bottom: 50px">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="@{/clientes}">Clientes</a>
+			<a class="navbar-brand" th:href="@{/clientes}">Clientes</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false"
@@ -60,14 +60,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="datos: ${key}">
-					<td th:text="${datos.cliente}"></td>
-					<td th:text="${datos.producto}"></td>
+				<tr th:each="datos: ${ventaKey}">
+					<td th:text="${datos.cliente.nombre}"></td>
+					<td th:text="${datos.producto.nombre}"></td>
 					<td th:text="${datos.cantidad}"></td>
 					<td th:text="${datos.subtotal}"></td>
 					<td th:text="${datos.iva}"></td>
 					<td th:text="${datos.total}"></td>
-					<td>
 				</tr>
 			</tbody>
 		</table>

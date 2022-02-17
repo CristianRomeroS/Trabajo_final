@@ -20,7 +20,7 @@ public class ProductoController {
 	
 	@GetMapping("/productos")
 	public String listarProductos(Model model) {
-		model.addAttribute("empleados",servicio.listarTodosLosProductos());
+		model.addAttribute("productoKey",servicio.listarTodosLosProductos());
 		return "productos";
 	}
 	
@@ -32,14 +32,14 @@ public class ProductoController {
 	}
 	
 	@PostMapping("/producto")
-	public String guardarProducto(@ModelAttribute("empleadoKey") Producto producto) {
+	public String guardarProducto(@ModelAttribute("productoKey") Producto producto) {
 		servicio.guardarProducto(producto);
 		return "redirect:/productos";
 	}
 	
-	@GetMapping("producto/editar/{id}")
+	@GetMapping("/producto/editar/{id}")
 	public String formulalrioEdicionProducto(@PathVariable Long id, Model modelo) {
-		modelo.addAttribute("departamentoKey", servicio.obtenerProductoPorId(id));
+		modelo.addAttribute("productoKey", servicio.obtenerProductoPorId(id));
 		return "editar_producto";
 	}
 	
@@ -57,6 +57,6 @@ public class ProductoController {
 	@GetMapping("/producto/borrar/{id}")
 	public String eliminarProdcuto(@PathVariable Long id) {
 		servicio.eliminarProducto(id);
-		return "redirect:/producto";
+		return "redirect:/productos";
 	}
 }

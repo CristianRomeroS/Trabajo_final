@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="clientes")
 public class Cliente implements Serializable{
@@ -24,7 +25,7 @@ public class Cliente implements Serializable{
 	private String sexo;
 	@Column(nullable=false)
 	private int telefono;
-	
+
 	
 	
 	public long getId() {
@@ -83,7 +84,6 @@ public class Cliente implements Serializable{
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-
 
 
 	/**

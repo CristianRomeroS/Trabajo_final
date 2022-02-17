@@ -47,7 +47,16 @@ public class ClienteController {
 	public String editarCliente(@PathVariable Long id, @ModelAttribute("clienteKey") Cliente cliente) {
 		Cliente newCliente = servicio.findById(id);
 		newCliente.setNombre(cliente.getNombre());
-
+		newCliente.setApellido(cliente.getApellido());
+		newCliente.setSexo(cliente.getSexo());
+		newCliente.setTelefono(cliente.getTelefono());
+		servicio.save(newCliente);
+		return "redirect:/clientes";
+	}
+	
+	@GetMapping("/cliente/borrar/{id}")
+	public String eliminarCliente(@PathVariable Long id) {
+		servicio.delete(id);
 		return "redirect:/clientes";
 	}
 
