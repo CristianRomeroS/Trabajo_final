@@ -26,7 +26,7 @@ public class Venta implements Serializable {
 	private long id;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="n_clientes")
+	@JoinColumn(name="n_cliente")
 	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 	private Cliente cliente;
 	
@@ -42,7 +42,7 @@ public class Venta implements Serializable {
 	@Column(nullable=false)
 	private double iva;
 	@Column(nullable=false)
-	private int total;
+	private double total;
 	
 	
 	public long getId() {
@@ -75,7 +75,7 @@ public class Venta implements Serializable {
 	}
 
 
-	public int getTotal() {
+	public double getTotal() {
 		return total;
 	}
 
@@ -110,7 +110,7 @@ public class Venta implements Serializable {
 	}
 
 
-	public void setTotal(int total) {
+	public void setTotal(double total) {
 		this.total = total;
 	}
 
