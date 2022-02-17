@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.formacionspringboot.app.dao.VentaDao;
 import com.formacionspringboot.app.entity.Venta;
 
 @Service
