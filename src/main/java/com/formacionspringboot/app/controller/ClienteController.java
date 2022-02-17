@@ -30,21 +30,21 @@ public class ClienteController {
 		return "nuevo_cliente";
 	}
 	
-	@PostMapping("departamento")
+	@PostMapping("cliente")
 	public String guardarCliente(@ModelAttribute("clienteKey") Cliente cliente) {
 		servicio.save(cliente);
 		return "redirect:/clientes";
 	}
 	
-	@GetMapping("/departamento/editar/{id}")
-	public String formularioEdicionDepartamento(@PathVariable Long id, Model modelo) {
+	@GetMapping("/cliente/editar/{id}")
+	public String formularioEdicionCliente(@PathVariable Long id, Model modelo) {
 		modelo.addAttribute("clienteKey", servicio.findById(id));
 		return "editar_cliente";
 		
 	}
 	
 	@PostMapping("/cliente/editar/{id}")
-	public String editarDepartamento(@PathVariable Long id, @ModelAttribute("clienteKey") Cliente cliente) {
+	public String editarCliente(@PathVariable Long id, @ModelAttribute("clienteKey") Cliente cliente) {
 		Cliente newCliente = servicio.findById(id);
 		newCliente.setNombre(cliente.getNombre());
 
