@@ -17,10 +17,10 @@ public class ClienteController {
 	@Autowired
 	private ClienteService servicio;
 	
-	@GetMapping({"/clientes"})
+	@GetMapping("/clientes")
 	public String listarClientes(Model model) {
 		model.addAttribute("key",servicio.findAll());
-		return"clientes";
+		return "clientes";
 	}
 	
 	@GetMapping("/cliente/nuevo")
