@@ -45,7 +45,7 @@ public class Cliente implements Serializable{
 
 
 
-	public String getsexo() {
+	public String getSexo() {
 		return sexo;
 	}
 
@@ -75,8 +75,8 @@ public class Cliente implements Serializable{
 
 
 
-	public void setsexo(String sexo) {
-		sexo = sexo;
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
 
