@@ -20,7 +20,7 @@ public class ProductoServiceImpl implements ProductoService{
 	}
 
 	@Override
-	public Producto guardarDepartamento(Producto producto) {
+	public Producto guardarProducto(Producto producto) {
 		return productoDao.save(producto);
 	}
 
